@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="min-w-full">
+        <div class="container mx-auto">
+            <nav class="flex justify-between items-center bg-slate-200 p-3">
+                <h1 class="text-3xl bg-red-700">Linux</h1>
+                <ul class="flex space-x-6">
+                    <li>Home</li>
+                    <li>Resources</li>
+                    <li>Contact Us</li>
+                </ul>
+                <!-- Here search will come -->
+                <div class="border-box border-black  border-2 border-width: 2px rounded-xl">
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass pl-2"></i>
+                        <input
+                            class="w-48 h-8 px-8 py-2 outline-none bg-[rgba(236,234,234,0.3)] border-0 rounded-[10px] text-xl text-black"
+                            type="text" placeholder="Search">
+                    </div>
+                </div>
+                <div class="px-6 space-x-10">
+                    <button class=" border-black border-2 px-8 py-2 rounded-xl">Sign In</button>
+                    <button class="border-black bg-green-500 border-2 px-8 py-2 rounded-xl">Login</button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Content -->
+        <div class="h-screen w-screen flex justify-center">
+            <div class="w-[80%] bg-slate-500">
+                <div class="flex">
+                    <div class="w-[75%] flex-col">
+                        <div class="flex py-4 border-b-2 border-white">
+                            <h1 class="text-3xl">File Permission</h1>
+                        </div>
+                        <div class="py-4">
+                            File Permissions
+                            As we learned previously, files have different permissions or file modes. Let's look at an
+                            example:
+
+                            $ ls -l Desktop/
+
+                            drwxr-xr-x 2 pete penguins 4096 Dec 1 11:45 .
+
+                            There are four parts to a file's permissions. The first part is the filetype, which is
+                            denoted
+                            by
+                            the first character in the permissions, in our case since we are looking at a directory it
+                            shows
+                            d
+                            for the filetype. Most commonly you will see a - for a regular file.
+
+                            The next three parts of the file mode are the actual permissions. The permissions are
+                            grouped
+                            into 3
+                            bits each. The first 3 bits are user permissions, then group permissions and then other
+                            permissions.
+                            I've added the pipe to make it easier to differentiate.
+
+                            d | rwx | r-x | r-x
+                            Each character represent a different permission:
+
+                            r: readable
+                            w: writable
+                            x: executable (basically an executable program)
+                            -: empty
+                            So in the above example, we see that the user pete has read, write and execute permissions
+                            on
+                            the
+                            file. The group penguins has read and execute permissions. And finally, the other users
+                            (everyone
+                            else) has read and execute permissions.
+                        </div>
+                    </div>
+                    <div class="border-l-2 border-white p-4 w-[25%] bg-slate-100 space-y-3">
+                        <div>
+                            <h1>Table of Contents</h1>
+                        </div>
+                        <div class="flex-col space-y-2">
+                            <p>Introdction</p>
+                            <ul class=" space-y-1">
+                                <li class="bg-slate-400 p-1 ">Linux Strcture</li>
+                                <li class="bg-slate-400 p-1 ">Linux Distributuions</li>
+                                <li class="bg-slate-400 p-1 ">Introduction to shell</li>
+                            </ul>
+                        </div>
+                        <div class="flex-col space-y-2">
+                            <p>The Shell</p>
+                            <ul class=" space-y-1">
+                                <li class="bg-slate-400 p-1 ">Prompt Description</li>
+                                <li class="bg-slate-400 p-1 ">Getting Help </li>
+                                <li class="bg-slate-400 p-1 ">System Information</li>
+                            </ul>
+                        </div>
+                        <div class="flex-col space-y-2">
+                            <p>Introdction</p>
+                            <ul class=" space-y-1">
+                                <li class="bg-slate-400 p-1 ">Linux Strcture</li>
+                                <li class="bg-slate-400 p-1 ">Linux Distributuions</li>
+                                <li class="bg-slate-400 p-1 ">Introduction to shell</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
